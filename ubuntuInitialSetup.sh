@@ -67,6 +67,16 @@ sudo dpkg -i rstudio-*-amd64.deb
 wget https://download2.rstudio.org/rstudio-server-1.1.383-amd64.deb
 sudo dpkg -i rstudio-server*-amd64.deb
 
+## install latex
+sudo apt-get install texlive-full
+
+## install java
+sudo apt-get install default-jdk default-jre
+sudo R CMD javareconf
+
+## install apt dependencies for R packages
+sudo apt-get install libcurl4-openssl-dev libxml2-dev libnetcdf-dev udunits-bin libudunits2-dev libssh2-1-dev 
+
 ## install slack
 # download from https://slack.com/downloads/linux
 sudo dpkg --install Downloads/slack-desktop-3.0.2-amd64.deb 
