@@ -7,16 +7,7 @@ library(tidyverse)
 ## use if first time running on system
 # validate_email()
 
-
-# platforms()
-
-pl <- c('ubuntu-gcc-devel',
-				'ubuntu-gcc-release',
-				'windows-x86_64-release',
-				'windows-x86_64-devel'
-				)
-
-walk(pl,~{
-	cat(,'\n')
-	check(platform = .)
+walk(platforms()$name,~{
+	cat(.,'\n')
+	check_for_cran(platform = .)
 	})
